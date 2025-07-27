@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getFirestore, collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDUAnfBB6PvvePBhbbKA-p56Spemvyyflo",
@@ -12,20 +12,21 @@ const firebaseConfig = {
   measurementId: "G-ZXRFTHQ6ZQ"
 };
 
-async function saveMessage(sender,text) {
-    try { 
-        await addDoc(collection(db,"messages"), {
-            sender:sender,
-            message:text,
-            timestamp:serverTimestamp()
-        });
-    } catch (error){
-        console.log("Message could not be saved!", error);
-    }
+async function saveMessage(sender, text) {
+  try {
+    await addDoc(collection(db, "messages"), {
+      sender: sender,
+      message: text,
+      timestamp: serverTimestamp()
+    });
+  } catch (error) {
+    console.log("Message could not be saved!", error);
+  }
 }
 
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-const db = getFirestore(app); 
 
-export { db }
+const db = getFirestore(app);
+
+export { db , saveMessage};

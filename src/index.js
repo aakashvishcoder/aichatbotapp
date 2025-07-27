@@ -1,3 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { db } from "./firebase";
-import { collection, addDoc, serverTimeStamp, onSnapshot, query, orderBy } from "./firebase/firestore";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./App.css";
+import ChatApp from "./components/chatapp";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<ChatApp />);
