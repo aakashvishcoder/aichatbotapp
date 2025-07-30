@@ -1,0 +1,79 @@
+/* App container */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  height: 90vh;
+  margin: 2rem auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Chat messages area */
+.chat-window {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background-color: #f4f4f8;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Chat bubble base */
+.chat-bubble {
+  max-width: 75%;
+  padding: 0.75rem 1rem;
+  margin: 0.3rem 0;
+  border-radius: 1rem;
+  font-size: 15px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+/* User messages */
+.user {
+  align-self: flex-end;
+  background-color: #dcf8c6;
+  color: #000;
+}
+
+/* AI messages */
+.ai {
+  align-self: flex-start;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+/* Input area */
+.input-area {
+  display: flex;
+  padding: 1rem;
+  border-top: 1px solid #ccc;
+  background-color: white;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 15px;
+}
+
+.input-area button {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 15px;
+  border: none;
+  border-radius: 20px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+.input-area button:hover {
+  background-color: #45a049;
+}
